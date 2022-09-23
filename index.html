@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Abacus</title>
+  </head>
+  <body>
+    <!-- flex container -->
+    <div id="container">
+      <!-- calculator -->
+      <section id="calculator">
+        <!-- calculator display -->
+        <section id="displayContainer">
+          <input id="display" type="text" />
+        </section>
+        <table id="keyPads">
+          <tr>
+            <td><input type="button" value="C" /></td>
+            <td><input type="button" value="(" /></td>
+            <td><input type="button" value=")" /></td>
+            <td><input type="button" value="<" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="7" /></td>
+            <td><input type="button" value="8" /></td>
+            <td><input type="button" value="9" /></td>
+            <td><input type="button" value="+" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="4" /></td>
+            <td><input type="button" value="5" /></td>
+            <td><input type="button" value="6" /></td>
+            <td><input type="button" value="-" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="1" /></td>
+            <td><input type="button" value="2" /></td>
+            <td><input type="button" value="3" /></td>
+            <td><input type="button" value="*" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="0" /></td>
+            <td><input type="button" value="." /></td>
+            <td><input type="button" value="/" /></td>
+            <td><input type="button" value="=" /></td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
